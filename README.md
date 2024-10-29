@@ -6,7 +6,8 @@ Algoritmo de Busca Clássica. Consiste na implementação dos seguintes algoritm
 Para inicializar o ambiente virtual:
  1. Navegar até a pasta anterior à do projeto
  2. Executar o seguinte comando:
-    ``` source ViagemTremEuropa/bin/activate ```
+    * Linux e MacOS: ``` source ViagemTremEuropa/bin/activate ```
+    * Windows: ```.\nome_do_ambiente\Scripts\activate ```
     Aparecerá (ViagemTremEuropa) no terminal.
- 3. Então, realizar a instalação das bibliotecas necessárias através do
+ 4. Então, realizar a instalação das bibliotecas necessárias através do
     ``` pip install biblioteca_dejejada ```
