@@ -15,3 +15,13 @@ Para inicializar o ambiente virtual:
     Aparecerá (ViagemTremEuropa) no terminal.
  4. Então, realizar a instalação das bibliotecas necessárias através do
     ``` pip install biblioteca_dejejada ```
+
+### Uso da API Google
+ Incluir na pasta raiz do projeto um arquivo JSON com o nome ```google_api_key.json```
+ Seguinte formato:
+```
+{
+    "key": "SUA_API_GOOGLE_AQUI"
+}
+```
+
