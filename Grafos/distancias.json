@@ -1,0 +1,26 @@
+{
+    "destination_addresses": [
+        "Rome, Metropolitan City of Rome Capital, Italy"
+    ],
+    "origin_addresses": [
+        "00120, Vatican City"
+    ],
+    "rows": [
+        {
+            "elements": [
+                {
+                    "distance": {
+                        "text": "3.6 km",
+                        "value": 3650
+                    },
+                    "duration": {
+                        "text": "14 mins",
+                        "value": 818
+                    },
+                    "status": "OK"
+                }
+            ]
+        }
+    ],
+    "status": "OK"
+}
