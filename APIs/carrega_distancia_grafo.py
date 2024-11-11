@@ -9,24 +9,19 @@ def carrega_json_origins_destinations():
         print("Arquivo não encontrado")
         return None
 
-def carrega_distancias():
-    try:
-        with open('./ViagemTremEuropa/Grafos/distancias.json', 'r', encoding='utf-8') as arquivo:
-            return json.load(arquivo)
-    except FileNotFoundError:
-        return {}
-    except json.JSONDecodeError:
-        return {}
 
 json_origins_destinations = carrega_json_origins_destinations()
-distancias = carrega_distancias()
 
 if json_origins_destinations is not None:
     for origin, destinations in json_origins_destinations.items():
-        jsonResposta = carrega_json_da_api_google(origin, destinations)
-        distancias.update(jsonResposta)
-        
-    with open('./ViagemTremEuropa/Grafos/distancias.json', 'w', encoding='utf-8') as arquivo:
-        json.dump(distancias, arquivo, indent=4)
+        for destination in destinations:
+            destination_index = destinations.index(destination)
+            if destination is not None:
+                jsonResposta = carrega_json_da_api_google(origin, destination)
+                distancia_value = jsonResposta.get('rows', [])[0].get('elements', [])[0].get('distance', {}).get('value', None)
+                if distancia_value is not None:
+                    json_origins_destinations[origin][destination_index] = (destination, distancia_value)
+    with open('./ViagemTremEuropa/Grafos/origins_destinations_distancies.json', 'w', encoding='utf-8') as arquivo:
+        json.dump(json_origins_destinations, arquivo, ensure_ascii=False, indent=4)
 else:
     print("Erro ao carregar arquivo json")
