@@ -89,4 +89,4 @@ class BuscaAprofundamentoIterativo(BuscaProfundidadeLimitada):
                 break
 
 algbusca = BuscaAprofundamentoIterativo()
-algbusca.realizaBusca('Berlin','Lisbon')
+algbusca.realizaBusca('Berlin','Athens')
