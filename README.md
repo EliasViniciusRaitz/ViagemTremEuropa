@@ -1,27 +1,29 @@
 # ViagemTremEuropa
-Algoritmo de Busca Clássica. Consiste na implementação dos seguintes algoritmos: Largura, Aprofundamento Interativo e A* encontrando o caminho para uma viagem de trem entre dois países da Europa.
 
+Algoritmo de Busca Clássica. Consiste na implementação dos seguintes algoritmos: Largura, Aprofundamento Interativo e A* encontrando o caminho para uma viagem de trem entre dois países da Europa.
 
 ### Ambiente virtual do Python
 
 Se não instalado o virtualenv.
-No terminal: ``` pip install virtualenv ```
+No terminal: ``pip install virtualenv``
 
 Para inicializar o ambiente virtual:
- 1. Navegar até a pasta anterior à do projeto
- 2. Executar o seguinte comando:
-    * Linux e MacOS: ``` source ViagemTremEuropa/bin/activate ```
-    * Windows: ```.\ViagemTremEuropa\bin\activate ```
-    Aparecerá (ViagemTremEuropa) no terminal.
- 4. Então, realizar a instalação das bibliotecas necessárias através do
-    ``` pip install biblioteca_dejejada ```
+
+1. Navegar até a pasta anterior à do projeto
+2. Executar o seguinte comando:
+   * Linux e MacOS: ``source /bin/activate``
+   * Windows: ``./bin/activate``
+     Aparecerá (ViagemTremEuropa) no terminal.
+3. Então, realizar a instalação das bibliotecas necessárias através do
+   ``pip install biblioteca_dejejada``
 
 ### Uso da API Google
- Incluir na pasta raiz do projeto um arquivo JSON com o nome ```google_api_key.json```
+
+ Incluir na pasta raiz do projeto um arquivo JSON com o nome ``google_api_key.json``
  Seguinte formato:
+
 ```
 {
     "key": "SUA_API_GOOGLE_AQUI"
 }
 ```
-
