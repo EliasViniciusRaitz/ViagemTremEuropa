@@ -12,49 +12,57 @@ class Estado:
 
 class BuscaHeuristica:
 
-  def __init__(self):
-    self.rotas = {
-                  'Albânia': [('Macedônia do Norte', 160), ('Grécia', 440), ('Montenegro', 190)],
-                  'Alemanha': [('França', 875), ('Polônia', 575), ('Áustria', 525), ('Países Baixos', 655)],
-                  'Andorra': [('Espanha', 200), ('França', 125)],
-                  'Áustria': [('Alemanha', 525), ('Suíça', 725), ('Eslováquia', 55), ('Itália', 750)],
-                  'Bélgica': [('França', 315), ('Países Baixos', 210), ('Alemanha', 250)],
-                  'Bielorrússia': [('Ucrânia', 565), ('Polônia', 470), ('Lituânia', 180)],
-                  'Bósnia e Herzegovina': [('Croácia', 400), ('Sérvia', 300)],
-                  'Bulgária': [('Romênia', 335), ('Grécia', 525), ('Sérvia', 395)],
-                  'Croácia': [('Eslovênia', 140), ('Hungria', 345), ('Bósnia e Herzegovina', 400)],
-                  'Dinamarca': [('Alemanha', 350), ('Suécia', 650)],
-                  'Eslováquia': [('Áustria', 55), ('República Tcheca', 330), ('Polônia', 535)],
-                  'Eslovênia': [('Itália', 200), ('Áustria', 375), ('Croácia', 140)],
-                  'Espanha': [('França', 1035), ('Portugal', 625), ('Andorra', 200)],
-                  'Estônia': [('Letônia', 310), ('Finlândia', 80)],
-                  'Finlândia': [('Estônia', 80), ('Suécia', 395)],
-                  'França': [('Andorra', 125), ('Espanha', 1035), ('Bélgica', 315), ('Alemanha', 875), ('Suíça', 575)],
-                  'Grécia': [('Albânia', 440), ('Bulgária', 525)],
-                  'Hungria': [('Áustria', 243), ('Romênia', 815), ('Eslováquia', 200)],
-                  'Itália': [('França', 955), ('Suíça', 695), ('Áustria', 750), ('Eslovênia', 200), ('San Marino', 15)],
-                  'Kosovo': [('Macedônia do Norte', 120), ('Sérvia', 365)],
-                  'Letônia': [('Estônia', 310), ('Lituânia', 300)],
-                  'Liechtenstein': [('Suíça', 115), ('Áustria', 185)],
-                  'Lituânia': [('Letônia', 300), ('Polônia', 560), ('Bielorrússia', 180)],
-                  'Luxemburgo': [('Bélgica', 210), ('Alemanha', 250)],
-                  'Macedônia do Norte': [('Albânia', 160), ('Kosovo', 120), ('Sérvia', 440)],
-                  'Moldávia': [('Romênia', 450), ('Ucrânia', 260)],
-                  'Mônaco': [('França', 20)],
-                  'Montenegro': [('Albânia', 190), ('Sérvia', 470)],
-                  'Noruega': [('Suécia', 525), ('Dinamarca', 615)],
-                  'Países Baixos': [('Bélgica', 210), ('Alemanha', 655)],
-                  'Polônia': [('Alemanha', 575), ('Lituânia', 560), ('Ucrânia', 690), ('Eslováquia', 535)],
-                  'Portugal': [('Espanha', 625)],
-                  'República Tcheca': [('Alemanha', 360), ('Áustria', 250), ('Polônia', 625)],
-                  'Romênia': [('Bulgária', 335), ('Hungria', 815), ('Sérvia', 495), ('Moldávia', 450)],
-                  'Reino Unido': [('França', 345)],
-                  'San Marino': [('Itália', 15)],
-                  'Suécia': [('Dinamarca', 650), ('Finlândia', 395), ('Noruega', 525)],
-                  'Suíça': [('França', 575), ('Alemanha', 355), ('Itália', 695)],
-                  'Ucrânia': [('Polônia', 690), ('Bielorrússia', 565), ('Moldávia', 260)]
-                  }
-    self.heuristicas= {
+      def __init__(self):
+            try:
+                  caminho_arquivo = os.path.join(os.path.dirname(__file__), '..', 'Grafos', 'origem_destino_distancies.json')
+                  with open(caminho_arquivo, 'r') as arquivo:
+                        self.rotas = json.load(arquivo)
+            except:
+                  print("Erro ao carregar arquivo de rotas")
+                  self.rotas = {}
+#     self.rotas = {
+#                   'Albânia': [('Macedônia do Norte', 160), ('Grécia', 440), ('Montenegro', 190)],
+#                   'Alemanha': [('França', 875), ('Polônia', 575), ('Áustria', 525), ('Países Baixos', 655)],
+#                   'Andorra': [('Espanha', 200), ('França', 125)],
+#                   'Áustria': [('Alemanha', 525), ('Suíça', 725), ('Eslováquia', 55), ('Itália', 750)],
+#                   'Bélgica': [('França', 315), ('Países Baixos', 210), ('Alemanha', 250)],
+#                   'Bielorrússia': [('Ucrânia', 565), ('Polônia', 470), ('Lituânia', 180)],
+#                   'Bósnia e Herzegovina': [('Croácia', 400), ('Sérvia', 300)],
+#                   'Bulgária': [('Romênia', 335), ('Grécia', 525), ('Sérvia', 395)],
+#                   'Croácia': [('Eslovênia', 140), ('Hungria', 345), ('Bósnia e Herzegovina', 400)],
+#                   'Dinamarca': [('Alemanha', 350), ('Suécia', 650)],
+#                   'Eslováquia': [('Áustria', 55), ('República Tcheca', 330), ('Polônia', 535)],
+#                   'Eslovênia': [('Itália', 200), ('Áustria', 375), ('Croácia', 140)],
+#                   'Espanha': [('França', 1035), ('Portugal', 625), ('Andorra', 200)],
+#                   'Estônia': [('Letônia', 310), ('Finlândia', 80)],
+#                   'Finlândia': [('Estônia', 80), ('Suécia', 395)],
+#                   'França': [('Andorra', 125), ('Espanha', 1035), ('Bélgica', 315), ('Alemanha', 875), ('Suíça', 575)],
+#                   'Grécia': [('Albânia', 440), ('Bulgária', 525)],
+#                   'Hungria': [('Áustria', 243), ('Romênia', 815), ('Eslováquia', 200)],
+#                   'Itália': [('França', 955), ('Suíça', 695), ('Áustria', 750), ('Eslovênia', 200), ('San Marino', 15)],
+#                   'Kosovo': [('Macedônia do Norte', 120), ('Sérvia', 365)],
+#                   'Letônia': [('Estônia', 310), ('Lituânia', 300)],
+#                   'Liechtenstein': [('Suíça', 115), ('Áustria', 185)],
+#                   'Lituânia': [('Letônia', 300), ('Polônia', 560), ('Bielorrússia', 180)],
+#                   'Luxemburgo': [('Bélgica', 210), ('Alemanha', 250)],
+#                   'Macedônia do Norte': [('Albânia', 160), ('Kosovo', 120), ('Sérvia', 440)],
+#                   'Moldávia': [('Romênia', 450), ('Ucrânia', 260)],
+#                   'Mônaco': [('França', 20)],
+#                   'Montenegro': [('Albânia', 190), ('Sérvia', 470)],
+#                   'Noruega': [('Suécia', 525), ('Dinamarca', 615)],
+#                   'Países Baixos': [('Bélgica', 210), ('Alemanha', 655)],
+#                   'Polônia': [('Alemanha', 575), ('Lituânia', 560), ('Ucrânia', 690), ('Eslováquia', 535)],
+#                   'Portugal': [('Espanha', 625)],
+#                   'República Tcheca': [('Alemanha', 360), ('Áustria', 250), ('Polônia', 625)],
+#                   'Romênia': [('Bulgária', 335), ('Hungria', 815), ('Sérvia', 495), ('Moldávia', 450)],
+#                   'Reino Unido': [('França', 345)],
+#                   'San Marino': [('Itália', 15)],
+#                   'Suécia': [('Dinamarca', 650), ('Finlândia', 395), ('Noruega', 525)],
+#                   'Suíça': [('França', 575), ('Alemanha', 355), ('Itália', 695)],
+#                   'Ucrânia': [('Polônia', 690), ('Bielorrússia', 565), ('Moldávia', 260)]
+#                   }
+
+            self.heuristicas= {
                   'Albânia': [('Albânia', 0), ('Alemanha', 1350), ('Andorra', 1600), ('Áustria', 950), ('Bélgica', 1750),
                         ('Bielorrússia', 1700), ('Bósnia e Herzegovina', 300), ('Bulgária', 400), ('Croácia', 600),
                         ('Dinamarca', 1800), ('Eslováquia', 900), ('Eslovênia', 500), ('Espanha', 1700), ('Estônia', 2000),
@@ -446,77 +454,78 @@ class BuscaHeuristica:
                       ('Suíça', 1700), ('Ucrânia', 0), ('San Marino', 1300)]
                   }
 
-  def realizaBusca(self, origem, destino):
-    fronteira = []
-    resultado, qtdVisitados, qtdExpandidos, arvore = self.busca(origem, destino, fronteira)
-    self.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
+      def realizaBusca(self, origem, destino):
+            fronteira = []
+            resultado, qtdVisitados, qtdExpandidos, arvore = self.busca(origem, destino, fronteira)
+            self.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
 
-  def busca(self, origem, destino, fronteira):
-    distancias = self.heuristicas.get(origem)
-    for d in distancias:
-      if d[0]==destino:
-        hn = d[1]
-    atual = Estado(origem, None, 0, hn)
-    fronteira.append(atual)
-    visitados = set()
-    visitados.add(atual.pais)
-    qtdVisitados = 1
-    qtdExpandidos = 0
-    arvore = Tree()
-    arvore.create_node(atual.pais+' - '+str(hn), atual)
+      def busca(self, origem, destino, fronteira):
+            distancias = self.heuristicas.get(origem)
+            for d in distancias:
+                  if d[0]==destino:
+                        hn = d[1]
+            atual = Estado(origem, None, 0, hn)
+            fronteira.append(atual)
+            visitados = set()
+            visitados.add(atual.pais)
+            qtdVisitados = 1
+            qtdExpandidos = 0
+            arvore = Tree()
+            arvore.create_node(atual.pais+' - '+str(hn), atual)
 
-    resultado = None
-    while len(fronteira)!=0:
-      fronteira.sort(key=lambda x: x.fn)
-      atual = fronteira.pop(0)
-      if atual.pais == destino:
-        resultado = atual
-        break
-      qtdExpandidos += 1
-      fronteira, qtdVisitados, arvore = self.geraFilhos(atual, destino, fronteira, qtdVisitados, arvore)
+            resultado = None
+            while len(fronteira)!=0:
+                  fronteira.sort(key=lambda x: x.fn)
+                  atual = fronteira.pop(0)
+                  if atual.pais == destino:
+                        resultado = atual
+                  break
+                  qtdExpandidos += 1
+                  fronteira, qtdVisitados, arvore = self.geraFilhos(atual, destino, fronteira, qtdVisitados, arvore)
 
-    return resultado, qtdVisitados, qtdExpandidos, arvore
+            return resultado, qtdVisitados, qtdExpandidos, arvore
 
-  def ehAncestral(self, pais, nodo):
-    while nodo != None:
-      if pais == nodo.pais:
-        return True
-      nodo = nodo.pai
-    return False
+      def ehAncestral(self, pais, nodo):
+            while nodo != None:
+                  if pais == nodo.pais:
+                        return True
+                  nodo = nodo.pai
+            return False
 
-  def geraFilhos(self, atual,  destino, fronteira, qtdVisitados, arvore):
-    paises = self.rotas.get(atual.pais)
-    for c in paises:
+      def geraFilhos(self, atual,  destino, fronteira, qtdVisitados, arvore):
+            paises = self.rotas.get(atual.pais)
+            for c in paises:
 
-      if atual.pai == None or not self.ehAncestral(c[0],atual.pai):
-        qtdVisitados += 1
-        distancias = self.heuristicas.get(c[0])
-        for d in distancias:
-          if d[0]==destino:
-            hn = d[1]
+                  if atual.pai == None or not self.ehAncestral(c[0],atual.pai):
+                        qtdVisitados += 1
+                  distancias = self.heuristicas.get(c[0])
+                  for d in distancias:
+                        if d[0]==destino:
+                              hn = d[1]
 
-        novo = Estado(c[0], atual, atual.gn + c[1], hn)
-        fronteira.append(novo)
+                  novo = Estado(c[0], atual, atual.gn + c[1], hn)
+                  fronteira.append(novo)
 
-        arvore.create_node(c[0]+' - '+str(hn), novo, parent=atual)
+                  arvore.create_node(c[0]+' - '+str(hn), novo, parent=atual)
 
-    return fronteira, qtdVisitados, arvore
+            return fronteira, qtdVisitados, arvore
 
-  def mostraResultado(self, resultado, qtdVisitados, qtdExpandidos, arvore):
-    if (resultado==None):
-      print('Solução não encontrada.')
-    else:
-      print('***Rota encontrada***')
-      print('A distância total da viagem é', resultado.gn,'Km')
-      print('---ROTA---')
-      while (resultado != None):
-        print(resultado.pais,'-',resultado.gn)
-        resultado = resultado.pai
-    print('----------')
-    print('Estados visitados: ',qtdVisitados)
-    print('Estados expandidos: ',qtdExpandidos)
-    print('****Árvore gerada****')
-    arvore.show()
+      def mostraResultado(self, resultado, qtdVisitados, qtdExpandidos, arvore):
+            if (resultado==None):
+                  print('Solução não encontrada.')
+            else:
+                  print('***Rota encontrada***')
+                  print('A distância total da viagem é', resultado.gn,'Km')
+                  print('---ROTA---')
+                  while (resultado != None):
+                        print(resultado.pais,'-',resultado.gn)
+                  resultado = resultado.pai
+            print('----------')
+            print('Estados visitados: ',qtdVisitados)
+            print('Estados expandidos: ',qtdExpandidos)
+            print('****Árvore gerada****')
+            arvore.show()
 
-algbusca = BuscaHeuristica()
-algbusca.realizaBusca('Portugal','Alemanha')
+if __name__ == '__main__':
+      algbusca = BuscaHeuristica()
+      algbusca.realizaBusca('Lisbon','Berlin')

@@ -88,5 +88,6 @@ class BuscaAprofundamentoIterativo(BuscaProfundidadeLimitada):
                 self.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
                 break
 
-algbusca = BuscaAprofundamentoIterativo()
-algbusca.realizaBusca('Berlin','Athens')
+if __name__ == '__main__':
+    algbusca = BuscaAprofundamentoIterativo()
+    algbusca.realizaBusca('Berlin','Athens')
