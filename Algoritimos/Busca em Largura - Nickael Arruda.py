@@ -1,4 +1,6 @@
 from queue import Queue
+import json
+import os
 
 class Estado:
     def __init__(self, cidade, pai):
@@ -21,47 +23,9 @@ class Tree:
 
 class Busca:
     def __init__(self):
-        self.rotas = {
-            'Albania': ['Montenegro', 'Macedônia do Norte'],
-            'Alemanha': ['França', 'Bélgica', 'Países Baixos', 'Dinamarca', 'Áustria', 'República Tcheca', 'Suíça'],
-            'Andorra': ['Espanha', 'França'],
-            'Áustria': ['Alemanha', 'República Tcheca', 'Eslováquia', 'Hungria', 'Suíça'],
-            'Bélgica': ['França', 'Países Baixos', 'Alemanha', 'Luxemburgo'],
-            'Bielorrússia': ['Polônia', 'Lituânia', 'Letônia', 'Ucrânia', 'Rússia'],
-            'Bulgária': ['Romênia', 'Sérvia', 'Grécia', 'Macedônia do Norte'],
-            'Croácia': ['Eslovênia', 'Hungria', 'Sérvia', 'Bósnia e Herzegovina', 'Montenegro'],
-            'República Tcheca': ['Alemanha', 'Polônia', 'Áustria', 'Eslováquia'],
-            'Dinamarca': ['Alemanha', 'Suécia'],
-            'Eslováquia': ['República Tcheca', 'Polônia', 'Áustria', 'Hungria'],
-            'Eslovênia': ['Áustria', 'Itália', 'Croácia', 'Hungria'],
-            'Espanha': ['Portugal', 'França', 'Andorra'],
-            'Estônia': ['Letônia', 'Finlândia', 'Rússia'],
-            'Finlândia': ['Suécia', 'Estônia', 'Rússia'],
-            'França': ['Bélgica', 'Luxemburgo', 'Alemanha', 'Suíça', 'Itália', 'Espanha', 'Inglaterra'],
-            'Geórgia': ['Armênia', 'Azerbaijão', 'Turquia', 'Rússia'],
-            'Grécia': ['Albânia', 'Macedônia do Norte', 'Bulgária', 'Turquia'],
-            'Hungria': ['Áustria', 'Eslováquia', 'Ucrânia', 'Romênia', 'Sérvia', 'Croácia'],
-            'Inglaterra': ['França'],  # Conexão da Inglaterra com a França
-            'Itália': ['França', 'Suíça', 'Áustria', 'Eslovênia'],
-            'Kosovo': ['Albânia', 'Sérvia', 'Montenegro'],
-            'Letônia': ['Estônia', 'Lituânia', 'Bielorrússia', 'Rússia'],
-            'Lituânia': ['Letônia', 'Polônia', 'Bielorrússia'],
-            'Luxemburgo': ['Bélgica', 'França', 'Alemanha'],
-            'Macedônia do Norte': ['Albânia', 'Grécia', 'Bulgária'],
-            'Moldávia': ['Romênia', 'Ucrânia'],
-            'Montenegro': ['Croácia', 'Bósnia e Herzegovina', 'Sérvia', 'Kosovo'],
-            'Noruega': ['Suécia', 'Finlândia'],
-            'Países Baixos': ['Bélgica', 'Alemanha'],
-            'Polônia': ['Alemanha', 'República Tcheca', 'Eslováquia', 'Ucrânia', 'Lituânia'],
-            'Portugal': ['Espanha'],
-            'Romênia': ['Ucrânia', 'Moldávia', 'Bulgária', 'Hungria'],
-            'Rússia': ['Finlândia', 'Estônia', 'Letônia', 'Lituânia', 'Bielorrússia', 'Ucrânia', 'Geórgia'],
-            'Sérvia': ['Hungria', 'Romênia', 'Bósnia e Herzegovina', 'Montenegro', 'Kosovo'],
-            'Suécia': ['Noruega', 'Dinamarca', 'Finlândia'],
-            'Suíça': ['França', 'Alemanha', 'Áustria', 'Liechtenstein'],
-            'Turquia': ['Grécia', 'Chipre', 'Geórgia', 'Armênia', 'Azerbaijão'],
-            'Ucrânia': ['Polônia', 'República Tcheca', 'Eslováquia', 'Hungria', 'Romênia', 'Moldávia', 'Rússia']
-        }
+        caminho_arquivo = os.path.join(os.path.dirname(__file__), '..', 'Grafos', 'origins_destinations.json')
+        with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+            self.rotas = json.load(arquivo)
 
     def busca(self, origem, destino, fronteira):
         atual = Estado(origem, None)
@@ -125,4 +89,4 @@ class BuscaLargura(Busca):
 # Exemplo de execução
 if __name__ == "__main__":
     algbusca = BuscaLargura()
-    algbusca.realizaBusca('Alemanha', 'Hungria')
+    algbusca.realizaBusca('Berlim', 'Budapeste')

@@ -42,7 +42,7 @@ class BuscaProfundidadeLimitada:
         return resultado, qtdVisitados, qtdExpandidos, arvore
 
     def geraFilhos(self, atual, destino, fronteira, visitados, qtdVisitados, arvore, limite):
-        paises_vizinhos = self.rotas.get(atual.pais)  
+        paises_vizinhos = self.rotas.get(atual.pais, [])
         for pais in paises_vizinhos:
             if pais == destino:
                 qtdVisitados += 1
@@ -90,4 +90,4 @@ class BuscaAprofundamentoIterativo(BuscaProfundidadeLimitada):
 
 if __name__ == '__main__':
     algbusca = BuscaAprofundamentoIterativo()
-    algbusca.realizaBusca('Berlin','Athens')
+    algbusca.realizaBusca('Berlim','Atenas')

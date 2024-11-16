@@ -1,168 +1,170 @@
 {
     "Tirana": [
-        "Athens",
-        "Skopje",
+        "Atenas",
+        "Escópia",
         "Pristina",
         "Podgorica"
     ],
-    "Berlin": [
-        "Copenhagen",
-        "Warsaw",
-        "Prague",
-        "Vienna",
-        "Bern",
+    "Berlim": [
+        "Copenhague",
+        "Varsóvia",
+        "Praga",
+        "Viena",
+        "Berna",
         "Paris",
-        "Luxembourg City",
-        "Brussels",
-        "Amsterdam"
+        "Cidade de Luxemburgo",
+        "Bruxelas",
+        "Amsterdã"
     ],
-    "Andorra la Vella": [
+    "Andorra-a-Velha": [
         "Paris",
-        "Madrid"
+        "Madri"
     ],
-    "Vienna": [
-        "Berlin",
-        "Prague",
+    "Viena": [
+        "Berlim",
+        "Praga",
         "Bratislava",
-        "Budapest",
+        "Budapeste",
         "Ljubljana",
-        "Rome",
-        "Bern",
+        "Roma",
+        "Berna",
         "Vaduz"
     ],
-    "Minsk": [
+    "Minsque": [
         "Riga",
         "Vilnius",
-        "Warsaw",
-        "Kyiv"
+        "Varsóvia",
+        "Quieve"
     ],
-    "Brussels": [
+    "Bruxelas": [
         "Paris",
-        "Berlin",
-        "Luxembourg City",
-        "Amsterdam"
+        "Berlim",
+        "Cidade de Luxemburgo",
+        "Amsterdã"
     ],
     "Sarajevo": [
         "Zagreb",
         "Podgorica",
-        "Belgrade"
+        "Belgrado"
     ],
-    "Sofia": [
-        "Athens",
-        "Skopje",
-        "Bucharest",
-        "Belgrade"
+    "Sófia": [
+        "Atenas",
+        "Escópia",
+        "Bucareste",
+        "Belgrado"
     ],
     "Zagreb": [
         "Sarajevo",
-        "Budapest",
+        "Budapeste",
         "Podgorica",
-        "Belgrade",
+        "Belgrado",
         "Ljubljana"
     ],
     "Nicosia": [],
-    "Copenhagen": [
-        "Berlin"
+    "Copenhague": [
+        "Berlim"
     ],
-    "Edinburgh": [
+    "Edimburgo": [
         "Dublin"
     ],
     "Bratislava": [
-        "Vienna",
-        "Prague",
-        "Budapest",
-        "Warsaw",
-        "Kyiv"
+        "Viena",
+        "Praga",
+        "Budapeste",
+        "Varsóvia",
+        "Quieve"
     ],
     "Ljubljana": [
-        "Vienna",
+        "Viena",
         "Zagreb",
-        "Budapest",
-        "Rome"
+        "Budapeste",
+        "Roma"
     ],
-    "Madrid": [
-        "Andorra la Vella",
+    "Madri": [
+        "Andorra-a-Velha",
         "Paris",
-        "Lisbon"
+        "Lisboa"
     ],
-    "Tallinn": [
+    "Tallin": [
         "Riga"
     ],
-    "Helsinki": [
+    "Helsinque": [
         "Oslo",
-        "Stockholm"
+        "Estocolmo"
     ],
     "Paris": [
-        "Andorra la Vella",
-        "Brussels",
-        "Berlin",
-        "Rome",
-        "Luxembourg City",
-        "Monaco",
-        "Madrid",
-        "Bern"
+        "Andorra-a-Velha",
+        "Bruxelas",
+        "Berlim",
+        "Roma",
+        "Cidade de Luxemburgo",
+        "Mônaco",
+        "Madri",
+        "Berna",
+        "Londres"
     ],
-    "Athens": [
+    "Atenas": [
         "Tirana",
-        "Sofia",
-        "Skopje"
+        "Sófia",
+        "Escópia"
     ],
-    "Budapest": [
-        "Vienna",
+    "Budapeste": [
+        "Viena",
         "Zagreb",
-        "Bucharest",
-        "Belgrade",
+        "Bucareste",
+        "Belgrado",
         "Bratislava",
         "Ljubljana",
-        "Kyiv"
+        "Quieve"
     ],
-    "London": [
-        "Edinburgh",
-        "Cardiff"
+    "Londres": [
+        "Edimburgo",
+        "Cardiff",
+        "Paris"
     ],
     "Dublin": [
-        "Edinburgh"
+        "Edimburgo"
     ],
     "Reykjavik": [],
-    "Rome": [
-        "Vienna",
+    "Roma": [
+        "Viena",
         "Paris",
-        "San Marino",
-        "Bern",
+        "São Marino",
+        "Berna",
         "Ljubljana",
-        "Vatican City"
+        "Cidade do Vaticano"
     ],
     "Pristina": [
         "Tirana",
-        "Skopje",
+        "Escópia",
         "Podgorica",
-        "Belgrade"
+        "Belgrado"
     ],
     "Riga": [
-        "Minsk",
-        "Tallinn",
+        "Minsque",
+        "Tallin",
         "Vilnius"
     ],
     "Vaduz": [
-        "Vienna",
-        "Bern"
+        "Viena",
+        "Berna"
     ],
     "Vilnius": [
-        "Minsk",
+        "Minsque",
         "Riga",
-        "Warsaw"
+        "Varsóvia"
     ],
-    "Luxembourg City": [
-        "Brussels",
+    "Cidade de Luxemburgo": [
+        "Bruxelas",
         "Paris",
-        "Berlin"
+        "Berlim"
     ],
-    "Valletta": [],
-    "Chișinău": [
-        "Bucharest",
-        "Kyiv"
+    "Valeta": [],
+    "Quixinau": [
+        "Bucareste",
+        "Quieve"
     ],
-    "Monaco": [
+    "Mônaco": [
         "Paris"
     ],
     "Podgorica": [
@@ -170,90 +172,90 @@
         "Sarajevo",
         "Zagreb",
         "Pristina",
-        "Belgrade"
+        "Belgrado"
     ],
-    "Skopje": [
+    "Escópia": [
         "Tirana",
-        "Sofia",
-        "Athens",
+        "Sófia",
+        "Atenas",
         "Pristina",
-        "Belgrade"
+        "Belgrado"
     ],
     "Oslo": [
-        "Helsinki",
-        "Stockholm"
+        "Helsinque",
+        "Estocolmo"
     ],
     "Cardiff": [
         "London"
     ],
-    "Amsterdam": [
-        "Brussels",
-        "Berlin"
+    "Amsterdã": [
+        "Bruxelas",
+        "Berlim"
     ],
-    "Warsaw": [
-        "Minsk",
-        "Prague",
-        "Berlin",
+    "Varsóvia": [
+        "Minsque",
+        "Praga",
+        "Berlim",
         "Vilnius",
         "Bratislava",
-        "Kyiv"
+        "Quieve"
     ],
-    "Lisbon": [
-        "Madrid"
+    "Lisboa": [
+        "Madri"
     ],
-    "Prague": [
-        "Vienna",
-        "Berlin",
-        "Warsaw",
+    "Praga": [
+        "Viena",
+        "Berlim",
+        "Varsóvia",
         "Bratislava"
     ],
-    "Bucharest": [
-        "Sofia",
-        "Budapest",
-        "Chișinău",
-        "Belgrade",
-        "Kyiv"
+    "Bucareste": [
+        "Sófia",
+        "Budapeste",
+        "Quixinau",
+        "Belgrado",
+        "Quieve"
     ],
-    "Moscow": [
-        "Minsk",
-        "Tallinn",
-        "Helsinki",
+    "Moscou": [
+        "Minsque",
+        "Tallin",
+        "Helsinque",
         "Riga",
-        "Kyiv"
+        "Quieve"
     ],
-    "San Marino": [
-        "Rome"
+    "São Marino": [
+        "Roma"
     ],
-    "Belgrade": [
+    "Belgrado": [
         "Sarajevo",
-        "Sofia",
+        "Sófia",
         "Zagreb",
-        "Budapest",
+        "Budapeste",
         "Pristina",
-        "Skopje",
+        "Escópia",
         "Podgorica",
-        "Bucharest"
+        "Bucareste"
     ],
-    "Stockholm": [
-        "Helsinki",
+    "Estocolmo": [
+        "Helsinque",
         "Oslo"
     ],
-    "Bern": [
-        "Vienna",
+    "Berna": [
+        "Viena",
         "Paris",
-        "Berlin",
-        "Rome",
+        "Berlim",
+        "Roma",
         "Vaduz"
     ],
-    "Kyiv": [
-        "Minsk",
-        "Budapest",
-        "Chișinău",
-        "Warsaw",
-        "Bucharest",
+    "Quieve": [
+        "Minsque",
+        "Budapeste",
+        "Quixinau",
+        "Varsóvia",
+        "Bucareste",
         "Bratislava"
     ],
-    "Vatican City": [
-        "Rome"
+    "Cidade do Vaticano": [
+        "Roma"
     ]
 }

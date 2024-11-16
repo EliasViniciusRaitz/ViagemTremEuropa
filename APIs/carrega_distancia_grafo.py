@@ -4,7 +4,7 @@ import os
 
 def carrega_json_origins_destinations():
     try:
-        caminho_arquivo = os.path.join('..', 'Grafos', 'origins_destinations.json')
+        caminho_arquivo = os.path.join(os.path.dirname(__file__), '..', 'Grafos', 'origins_destinations.json')
         with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
             return json.load(arquivo)
     except FileNotFoundError:
@@ -23,7 +23,7 @@ if json_origins_destinations is not None:
                 distancia_value = jsonResposta.get('rows', [])[0].get('elements', [])[0].get('distance', {}).get('value', None)
                 if distancia_value is not None:
                     json_origins_destinations[origin][destination_index] = (destination, distancia_value)
-    caminho_arquivo = os.path.join('..', 'Grafos', 'origins_destinations_distancies.json')
+    caminho_arquivo = os.path.join(os.path.dirname(__file__), '..', 'Grafos', 'origins_destinations_distancies.json')
     with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
         json.dump(json_origins_destinations, arquivo, ensure_ascii=False, indent=4)
 else:

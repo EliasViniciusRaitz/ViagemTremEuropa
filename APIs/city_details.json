@@ -1,0 +1,290 @@
+{
+    "Tirana": {
+        "paisCidade": "Tirana, Albânia",
+        "pais": "Albânia",
+        "latitude": 41.3275459,
+        "longitude": 19.8186982
+    },
+    "Berlim": {
+        "paisCidade": "Berlim, Alemanha",
+        "pais": "Alemanha",
+        "latitude": 52.520006599999995,
+        "longitude": 13.404954
+    },
+    "Andorra-a-Velha": {
+        "paisCidade": "AD500 Andorra-a-Velha, Andorra",
+        "pais": "Andorra",
+        "latitude": 42.50631740000001,
+        "longitude": 1.5218355000000001
+    },
+    "Viena": {
+        "paisCidade": "Viena, Áustria",
+        "pais": "Áustria",
+        "latitude": 48.208069599999995,
+        "longitude": 16.3713095
+    },
+    "Minsk": {
+        "paisCidade": "Minsk, Bielorrússia",
+        "pais": "Bielorrússia",
+        "latitude": 53.900601099999996,
+        "longitude": 27.558971999999997
+    },
+    "Bruxelas": {
+        "paisCidade": "Bruxelas, Bélgica",
+        "pais": "Bélgica",
+        "latitude": 50.847702899999994,
+        "longitude": 4.357200100000001
+    },
+    "Sarajevo": {
+        "paisCidade": "Sarajevo, Bósnia e Herzegovina",
+        "pais": "Bósnia e Herzegovina",
+        "latitude": 43.856258600000004,
+        "longitude": 18.4130763
+    },
+    "Sófia": {
+        "paisCidade": "Sófia, Bulgária",
+        "pais": "Bulgária",
+        "latitude": 42.6977082,
+        "longitude": 23.3218675
+    },
+    "Zagrebe": {
+        "paisCidade": "Zagrebe, Croácia",
+        "pais": "Croácia",
+        "latitude": 45.815010799999996,
+        "longitude": 15.981919000000001
+    },
+    "Nicósia": {
+        "paisCidade": "Nicósia, Chipre",
+        "pais": "Chipre",
+        "latitude": 35.1855659,
+        "longitude": 33.382276399999995
+    },
+    "Copenhage": {
+        "paisCidade": "Copenhage, Dinamarca",
+        "pais": "Dinamarca",
+        "latitude": 55.676096799999996,
+        "longitude": 12.568337099999999
+    },
+    "Edimburgo": {
+        "paisCidade": "Edimburgo, Reino Unido",
+        "pais": "Escócia",
+        "latitude": 55.953252,
+        "longitude": -3.1882669999999997
+    },
+    "Bratislava": {
+        "paisCidade": "Bratislava, Eslováquia",
+        "pais": "Eslováquia",
+        "latitude": 48.1485965,
+        "longitude": 17.1077477
+    },
+    "Liubliana": {
+        "paisCidade": "Liubliana, Eslovênia",
+        "pais": "Eslovênia",
+        "latitude": 46.056946499999995,
+        "longitude": 14.505751499999999
+    },
+    "Madrid": {
+        "paisCidade": "Madrid, Madri, Espanha",
+        "pais": "Espanha",
+        "latitude": 40.416727900000005,
+        "longitude": -3.7032905
+    },
+    "Talín": {
+        "paisCidade": "Talín, Estônia",
+        "pais": "Estônia",
+        "latitude": 59.43696079999999,
+        "longitude": 24.7535746
+    },
+    "Helsinque": {
+        "paisCidade": "Helsinque, Finlândia",
+        "pais": "Finlândia",
+        "latitude": 60.16985569999999,
+        "longitude": 24.938378999999998
+    },
+    "Paris": {
+        "paisCidade": "Paris, França",
+        "pais": "França",
+        "latitude": 48.857547499999995,
+        "longitude": 2.3513764999999998
+    },
+    "Atenas": {
+        "paisCidade": "Atenas, Grécia",
+        "pais": "Grécia",
+        "latitude": 37.9838096,
+        "longitude": 23.727538799999998
+    },
+    "Budapeste": {
+        "paisCidade": "Budapeste, Hungria",
+        "pais": "Hungria",
+        "latitude": 47.497912,
+        "longitude": 19.040235
+    },
+    "Londres": {
+        "paisCidade": "Londres, Reino Unido",
+        "pais": "Inglaterra",
+        "latitude": 51.5072178,
+        "longitude": -0.12758619999999998
+    },
+    "Dublin": {
+        "paisCidade": "Dublin, Irlanda",
+        "pais": "Irlanda",
+        "latitude": 53.3498053,
+        "longitude": -6.2603097
+    },
+    "Reykjavik": {
+        "paisCidade": "Reykjavik, Islândia",
+        "pais": "Islândia",
+        "latitude": 64.1469868,
+        "longitude": -21.940755199999998
+    },
+    "Roma": {
+        "paisCidade": "Roma, Itália",
+        "pais": "Itália",
+        "latitude": 41.8967068,
+        "longitude": 12.4822025
+    },
+    "Pristina": {
+        "paisCidade": "Pristina",
+        "pais": "Itália",
+        "latitude": 42.6629138,
+        "longitude": 21.1655028
+    },
+    "Riga": {
+        "paisCidade": "Riga, Letônia",
+        "pais": "Letônia",
+        "latitude": 56.967694099999996,
+        "longitude": 24.105622099999998
+    },
+    "Vaduz": {
+        "paisCidade": "9490 Vaduz, Liechtenstein",
+        "pais": "Liechtenstein",
+        "latitude": 47.141084299999996,
+        "longitude": 9.5210732
+    },
+    "Vilnius": {
+        "paisCidade": "Vilnius, Vilnius City Municipality, Lituânia",
+        "pais": "Lituânia",
+        "latitude": 54.687155499999996,
+        "longitude": 25.2796514
+    },
+    "Luxemburgo": {
+        "paisCidade": "Luxemburgo",
+        "pais": "Luxemburgo",
+        "latitude": 49.61162100000001,
+        "longitude": 6.1319346
+    },
+    "Valeta": {
+        "paisCidade": "Valeta, Malta",
+        "pais": "Malta",
+        "latitude": 35.8992375,
+        "longitude": 14.5140996
+    },
+    "Chisinau": {
+        "paisCidade": "Chisinau, Moldávia",
+        "pais": "Moldávia",
+        "latitude": 47.0104529,
+        "longitude": 28.8638103
+    },
+    "Mônaco": {
+        "paisCidade": "Mônaco",
+        "pais": "Mônaco",
+        "latitude": 43.738417600000005,
+        "longitude": 7.424615799999999
+    },
+    "Podgorica": {
+        "paisCidade": "Podgorica, Montenegro",
+        "pais": "Montenegro",
+        "latitude": 42.4304196,
+        "longitude": 19.2593642
+    },
+    "Escópia": {
+        "paisCidade": "Escópia, Macedônia do Norte",
+        "pais": "Macedônia do Norte",
+        "latitude": 41.998129399999996,
+        "longitude": 21.4254355
+    },
+    "Oslo": {
+        "paisCidade": "Oslo, Noruega",
+        "pais": "Noruega",
+        "latitude": 59.913868799999996,
+        "longitude": 10.7522454
+    },
+    "Cardiff": {
+        "paisCidade": "Cardiff, Reino Unido",
+        "pais": "País de Gales",
+        "latitude": 51.483706999999995,
+        "longitude": -3.1680962
+    },
+    "Amesterdã": {
+        "paisCidade": "Amesterdã, Países Baixos",
+        "pais": "Países Baixos",
+        "latitude": 52.3675734,
+        "longitude": 4.9041388999999995
+    },
+    "Varsóvia": {
+        "paisCidade": "Varsóvia, Polônia",
+        "pais": "Polônia",
+        "latitude": 52.2296756,
+        "longitude": 21.012228699999998
+    },
+    "Lisboa": {
+        "paisCidade": "Lisboa, Portugal",
+        "pais": "Portugal",
+        "latitude": 38.722252399999995,
+        "longitude": -9.1393366
+    },
+    "Praga": {
+        "paisCidade": "Praga, Tchéquia",
+        "pais": "Tchéquia",
+        "latitude": 50.075538099999996,
+        "longitude": 14.437800500000002
+    },
+    "Bucareste": {
+        "paisCidade": "Bucareste, Romênia",
+        "pais": "Romênia",
+        "latitude": 44.426767399999996,
+        "longitude": 26.1025384
+    },
+    "Moscou": {
+        "paisCidade": "Moscou, Rússia",
+        "pais": "Rússia",
+        "latitude": 55.755826,
+        "longitude": 37.6173
+    },
+    "San Marino": {
+        "paisCidade": "San Marino",
+        "pais": "San Marino",
+        "latitude": 43.94236,
+        "longitude": 12.457777
+    },
+    "Belgrado": {
+        "paisCidade": "Belgrado, Sérvia",
+        "pais": "Sérvia",
+        "latitude": 44.8125449,
+        "longitude": 20.46123
+    },
+    "Estocolmo": {
+        "paisCidade": "Estocolmo, Suécia",
+        "pais": "Suécia",
+        "latitude": 59.3360685,
+        "longitude": 18.084277399999998
+    },
+    "Berna": {
+        "paisCidade": "Berna, Suíça",
+        "pais": "Suíça",
+        "latitude": 46.9479739,
+        "longitude": 7.4474468
+    },
+    "Kiev": {
+        "paisCidade": "Kiev, Ucrânia, 02000",
+        "pais": "Ucrânia",
+        "latitude": 50.4503596,
+        "longitude": 30.524502499999997
+    },
+    "Vaticano": {
+        "paisCidade": "00120 Vatican City, Vaticano",
+        "pais": "Vaticano",
+        "latitude": 41.902916,
+        "longitude": 12.453389000000001
+    }
+}

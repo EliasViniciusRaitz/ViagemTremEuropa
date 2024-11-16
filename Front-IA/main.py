@@ -1,6 +1,6 @@
 import streamlit as st
 import folium
-from streamlit_folium import folium_static 
+from streamlit_folium import folium_static
 
 # Adicionando Título na guia da Página 
 st.set_page_config(page_title="Trabalho - Inteligência Artificial", page_icon="🌍")

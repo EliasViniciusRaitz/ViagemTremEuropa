@@ -1,11 +1,11 @@
 {
     "Tirana": [
         [
-            "Athens",
+            "Atenas",
             679387
         ],
         [
-            "Skopje",
+            "Escópia",
             221945
         ],
         [
@@ -17,61 +17,58 @@
             158258
         ]
     ],
-    "Berlin": [
+    "Berlim": [
         [
-            "Copenhagen",
+            "Copenhague",
             438462
         ],
         [
-            "Warsaw",
-            576227
+            "Varsóvia",
+            574879
         ],
         [
-            "Prague",
+            "Praga",
             349126
         ],
         [
-            "Vienna",
-            682163
+            "Viena",
+            682133
         ],
         [
-            "Bern",
-            958754
+            "Berna",
+            955006
         ],
         [
             "Paris",
-            1050156
+            1050240
         ],
         [
-            "Luxembourg City",
-            767216
+            "Cidade de Luxemburgo",
+            762258
         ],
         [
-            "Brussels",
-            754256
+            "Bruxelas",
+            754339
         ],
         [
-            "Amsterdam",
-            655263
+            "Amsterdã",
+            655350
         ]
     ],
-    "Andorra la Vella": [
+    "Andorra-a-Velha": [
         [
             "Paris",
-            861637
+            862056
         ],
-        [
-            "Madrid",
-            613947
-        ]
+        "Madri"
     ],
-    "Vienna": [
+    "Viena": [
         [
-            "Berlin",
-            683286
+            "Berlim",
+            683285
         ],
         [
-            "Prague",
+            "Praga",
             334605
         ],
         [
@@ -79,7 +76,7 @@
             81333
         ],
         [
-            "Budapest",
+            "Budapeste",
             243981
         ],
         [
@@ -87,19 +84,19 @@
             381277
         ],
         [
-            "Rome",
-            1122838
+            "Roma",
+            1122840
         ],
         [
-            "Bern",
-            838639
+            "Berna",
+            838641
         ],
         [
             "Vaduz",
             648978
         ]
     ],
-    "Minsk": [
+    "Minsque": [
         [
             "Riga",
             484725
@@ -109,29 +106,29 @@
             189078
         ],
         [
-            "Warsaw",
-            554806
+            "Varsóvia",
+            555102
         ],
         [
-            "Kyiv",
+            "Quieve",
             1029735
         ]
     ],
-    "Brussels": [
+    "Bruxelas": [
         [
             "Paris",
             307567
         ],
         [
-            "Berlin",
-            756627
+            "Berlim",
+            756626
         ],
         [
-            "Luxembourg City",
+            "Cidade de Luxemburgo",
             217960
         ],
         [
-            "Amsterdam",
+            "Amsterdã",
             210873
         ]
     ],
@@ -145,25 +142,25 @@
             229981
         ],
         [
-            "Belgrade",
+            "Belgrado",
             297325
         ]
     ],
-    "Sofia": [
+    "Sófia": [
         [
-            "Athens",
+            "Atenas",
             790686
         ],
         [
-            "Skopje",
+            "Escópia",
             244172
         ],
         [
-            "Bucharest",
+            "Bucareste",
             382798
         ],
         [
-            "Belgrade",
+            "Belgrado",
             392853
         ]
     ],
@@ -173,7 +170,7 @@
             401664
         ],
         [
-            "Budapest",
+            "Budapeste",
             345710
         ],
         [
@@ -181,7 +178,7 @@
             714744
         ],
         [
-            "Belgrade",
+            "Belgrado",
             393627
         ],
         [
@@ -190,139 +187,131 @@
         ]
     ],
     "Nicosia": [],
-    "Copenhagen": [
+    "Copenhague": [
         [
-            "Berlin",
+            "Berlim",
             438816
         ]
     ],
-    "Edinburgh": [
+    "Edimburgo": [
         [
             "Dublin",
-            467031
+            461246
         ]
     ],
     "Bratislava": [
         [
-            "Vienna",
+            "Viena",
             79900
         ],
         [
-            "Prague",
+            "Praga",
             328469
         ],
         [
-            "Budapest",
+            "Budapeste",
             199882
         ],
         [
-            "Warsaw",
-            663176
+            "Varsóvia",
+            661827
         ],
         [
-            "Kyiv",
+            "Quieve",
             1325912
         ]
     ],
     "Ljubljana": [
         [
-            "Vienna",
-            381196
+            "Viena",
+            384960
         ],
         [
             "Zagreb",
             140439
         ],
         [
-            "Budapest",
+            "Budapeste",
             462257
         ],
         [
-            "Rome",
-            755568
+            "Roma",
+            755570
         ]
     ],
-    "Madrid": [
-        [
-            "Andorra la Vella",
-            615043
-        ],
-        [
-            "Paris",
-            1278036
-        ],
-        [
-            "Lisbon",
-            620782
-        ]
+    "Madri": [
+        "Andorra-a-Velha",
+        "Paris",
+        "Lisboa"
     ],
-    "Tallinn": [
+    "Tallin": [
         [
             "Riga",
             310147
         ]
     ],
-    "Helsinki": [
+    "Helsinque": [
         [
             "Oslo",
             1401477
         ],
         [
-            "Stockholm",
+            "Estocolmo",
             482499
         ]
     ],
     "Paris": [
         [
-            "Andorra la Vella",
-            858986
+            "Andorra-a-Velha",
+            859012
         ],
         [
-            "Brussels",
+            "Bruxelas",
             312080
         ],
         [
-            "Berlin",
-            1054027
+            "Berlim",
+            1054026
         ],
         [
-            "Rome",
-            1439706
+            "Roma",
+            1439708
         ],
         [
-            "Luxembourg City",
+            "Cidade de Luxemburgo",
             373267
         ],
         [
-            "Monaco",
+            "Mônaco",
             953546
         ],
+        "Madri",
         [
-            "Madrid",
-            1275419
+            "Berna",
+            587240
         ],
         [
-            "Bern",
-            587240
+            "Londres",
+            466202
         ]
     ],
-    "Athens": [
+    "Atenas": [
         [
             "Tirana",
             677526
         ],
         [
-            "Sofia",
-            791747
+            "Sófia",
+            791695
         ],
         [
-            "Skopje",
-            695687
+            "Escópia",
+            695634
         ]
     ],
-    "Budapest": [
+    "Budapeste": [
         [
-            "Vienna",
+            "Viena",
             244596
         ],
         [
@@ -330,11 +319,11 @@
             343517
         ],
         [
-            "Bucharest",
-            833700
+            "Bucareste",
+            833652
         ],
         [
-            "Belgrade",
+            "Belgrado",
             377887
         ],
         [
@@ -346,42 +335,46 @@
             462636
         ],
         [
-            "Kyiv",
-            1123944
+            "Quieve",
+            1116090
         ]
     ],
-    "London": [
+    "Londres": [
         [
-            "Edinburgh",
-            674091
+            "Edimburgo",
+            674144
         ],
         [
-            "Cardiff",
+            "Cardife",
             239543
+        ],
+        [
+            "Paris",
+            471175
         ]
     ],
     "Dublin": [
         [
-            "Edinburgh",
-            468976
+            "Edimburgo",
+            466676
         ]
     ],
     "Reykjavik": [],
-    "Rome": [
+    "Roma": [
         [
-            "Vienna",
-            1123906
+            "Viena",
+            1127670
         ],
         [
             "Paris",
-            1444651
+            1464729
         ],
         [
-            "San Marino",
-            317206
+            "São Marino",
+            319878
         ],
         [
-            "Bern",
+            "Berna",
             929033
         ],
         [
@@ -389,7 +382,7 @@
             756512
         ],
         [
-            "Vatican City",
+            "Cidade do Vaticano",
             4138
         ]
     ],
@@ -399,25 +392,25 @@
             256093
         ],
         [
-            "Skopje",
-            93692
+            "Escópia",
+            93149
         ],
         [
             "Podgorica",
             254070
         ],
         [
-            "Belgrade",
+            "Belgrado",
             524897
         ]
     ],
     "Riga": [
         [
-            "Minsk",
+            "Minsque",
             480468
         ],
         [
-            "Tallinn",
+            "Tallin",
             308324
         ],
         [
@@ -427,17 +420,17 @@
     ],
     "Vaduz": [
         [
-            "Vienna",
-            670287
+            "Viena",
+            650996
         ],
         [
-            "Bern",
+            "Berna",
             230268
         ]
     ],
     "Vilnius": [
         [
-            "Minsk",
+            "Minsque",
             187096
         ],
         [
@@ -445,39 +438,39 @@
             295109
         ],
         [
-            "Warsaw",
-            501533
+            "Varsóvia",
+            510362
         ]
     ],
-    "Luxembourg City": [
+    "Cidade de Luxemburgo": [
         [
-            "Brussels",
+            "Bruxelas",
             212127
         ],
         [
             "Paris",
-            374947
+            375340
         ],
         [
-            "Berlin",
-            769963
+            "Berlim",
+            766313
         ]
     ],
-    "Valletta": [],
-    "Chișinău": [
+    "Valeta": [],
+    "Quixinau": [
         [
-            "Bucharest",
+            "Bucareste",
             468576
         ],
         [
-            "Kyiv",
+            "Quieve",
             590786
         ]
     ],
-    "Monaco": [
+    "Mônaco": [
         [
             "Paris",
-            955560
+            956287
         ]
     ],
     "Podgorica": [
@@ -498,21 +491,21 @@
             253822
         ],
         [
-            "Belgrade",
+            "Belgrado",
             447169
         ]
     ],
-    "Skopje": [
+    "Escópia": [
         [
             "Tirana",
             222577
         ],
         [
-            "Sofia",
+            "Sófia",
             242091
         ],
         [
-            "Athens",
+            "Atenas",
             697968
         ],
         [
@@ -520,119 +513,116 @@
             91464
         ],
         [
-            "Belgrade",
+            "Belgrado",
             432127
         ]
     ],
     "Oslo": [
         [
-            "Helsinki",
+            "Helsinque",
             1396829
         ],
         [
-            "Stockholm",
-            527678
+            "Estocolmo",
+            527562
         ]
     ],
-    "Cardiff": [
+    "Cardife": [
         [
             "London",
             239867
         ]
     ],
-    "Amsterdam": [
+    "Amsterdã": [
         [
-            "Brussels",
-            209807
+            "Bruxelas",
+            209800
         ],
         [
-            "Berlin",
-            661906
+            "Berlim",
+            656257
         ]
     ],
-    "Warsaw": [
+    "Varsóvia": [
         [
-            "Minsk",
-            554727
+            "Minsque",
+            554695
         ],
         [
-            "Prague",
-            637937
+            "Praga",
+            646012
         ],
         [
-            "Berlin",
-            573579
+            "Berlim",
+            572941
         ],
         [
             "Vilnius",
-            503744
+            513380
         ],
         [
             "Bratislava",
-            662564
+            661926
         ],
         [
-            "Kyiv",
-            815975
+            "Quieve",
+            815944
         ]
     ],
-    "Lisbon": [
-        [
-            "Madrid",
-            630552
-        ]
+    "Lisboa": [
+        "Madri"
     ],
-    "Prague": [
+    "Praga": [
         [
-            "Vienna",
-            334499
+            "Viena",
+            334468
         ],
         [
-            "Berlin",
+            "Berlim",
             349556
         ],
         [
-            "Warsaw",
-            639345
+            "Varsóvia",
+            637998
         ],
         [
             "Bratislava",
             328448
         ]
     ],
-    "Bucharest": [
+    "Bucareste": [
         [
-            "Sofia",
-            383819
+            "Sófia",
+            383849
         ],
         [
-            "Budapest",
+            "Budapeste",
             835764
         ],
         [
-            "Chișinău",
+            "Quixinau",
             473995
         ],
         [
-            "Belgrade",
+            "Belgrado",
             596830
         ],
         [
-            "Kyiv",
+            "Quieve",
             1048844
         ]
     ],
-    "Moscow": [
+    "Moscou": [
         [
-            "Minsk",
+            "Minsque",
             717831
         ],
         [
-            "Tallinn",
+            "Tallin",
             1041315
         ],
         [
-            "Helsinki",
+            "Helsinque",
             1152893
         ],
         [
@@ -640,23 +630,23 @@
             930115
         ],
         [
-            "Kyiv",
+            "Quieve",
             1671861
         ]
     ],
-    "San Marino": [
+    "São Marino": [
         [
-            "Rome",
-            382846
+            "Roma",
+            382848
         ]
     ],
-    "Belgrade": [
+    "Belgrado": [
         [
             "Sarajevo",
             300517
         ],
         [
-            "Sofia",
+            "Sófia",
             391259
         ],
         [
@@ -664,7 +654,7 @@
             395665
         ],
         [
-            "Budapest",
+            "Budapeste",
             379170
         ],
         [
@@ -672,7 +662,7 @@
             520212
         ],
         [
-            "Skopje",
+            "Escópia",
             430964
         ],
         [
@@ -680,61 +670,61 @@
             448302
         ],
         [
-            "Bucharest",
+            "Bucareste",
             597157
         ]
     ],
-    "Stockholm": [
+    "Estocolmo": [
         [
-            "Helsinki",
+            "Helsinque",
             482183
         ],
         [
             "Oslo",
-            530913
+            530311
         ]
     ],
-    "Bern": [
+    "Berna": [
         [
-            "Vienna",
-            859716
+            "Viena",
+            840427
         ],
         [
             "Paris",
-            572830
+            573935
         ],
         [
-            "Berlin",
-            959041
+            "Berlim",
+            955613
         ],
         [
-            "Rome",
-            927758
+            "Roma",
+            927761
         ],
         [
             "Vaduz",
             230664
         ]
     ],
-    "Kyiv": [
+    "Quieve": [
         [
-            "Minsk",
+            "Minsque",
             993506
         ],
         [
-            "Budapest",
+            "Budapeste",
             1118004
         ],
         [
-            "Chișinău",
+            "Quixinau",
             651802
         ],
         [
-            "Warsaw",
-            788510
+            "Varsóvia",
+            788806
         ],
         [
-            "Bucharest",
+            "Bucareste",
             1048033
         ],
         [
@@ -742,9 +732,9 @@
             1317762
         ]
     ],
-    "Vatican City": [
+    "Cidade do Vaticano": [
         [
-            "Rome",
+            "Roma",
             3650
         ]
     ]
