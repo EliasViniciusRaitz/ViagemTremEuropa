@@ -88,5 +88,8 @@ class BuscaLargura(Busca):
 
 # Exemplo de execução
 if __name__ == "__main__":
+    origins = input("Digite a cidade de origem: ")
+    destinations = input("Digite a cidade de destino: ")
+
     algbusca = BuscaLargura()
-    algbusca.realizaBusca('Berlim', 'Budapeste')
+    algbusca.realizaBusca(origins, destinations)
