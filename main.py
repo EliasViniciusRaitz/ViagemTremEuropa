@@ -4,9 +4,9 @@ from streamlit_folium import folium_static
 import os
 import json
 
-from Algoritimos import buscaProfundidadeInterativa as bpi
-from Algoritimos import buscaEmLargura as bel
-from Algoritimos import buscaAEstrela as ae
+from buscaProfundidadeInterativa import BuscaAprofundamentoIterativo as bpi
+from buscaEmLargura import BuscaLargura as bel
+from buscaAEstrela import BuscaHeuristica as bae
 
 # Adicionando Título na guia da Página 
 st.set_page_config(page_title="Trabalho - Inteligência Artificial", page_icon="🌍")
@@ -19,7 +19,7 @@ with open("styles/styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Lista de coordenadas das capitais da Europa
-caminho_arquivo_detalhes = os.path.join(os.path.dirname(__file__), '..', 'APIs', 'city_details.json')
+caminho_arquivo_detalhes = os.path.join(os.path.dirname(__file__), 'APIs', 'city_details.json')
 with open(caminho_arquivo_detalhes, 'r', encoding='utf-8') as arquivo:
     cidades_detalhes = json.load(arquivo)
 
@@ -31,9 +31,11 @@ for cidade, detalhes in cidades_detalhes.items():
 
 # Selecionar o país de origem
 country_from = st.selectbox("Selecione a capital de origem:", list(coordenadas.keys()))
+country_from = country_from.strip()
 
 # Selecionar o país de destino
 country_to = st.selectbox("Selecione a capital de destino:", list(coordenadas.keys()))
+country_to = country_to.strip()
 
 # Validação para evitar seleção igual
 if country_from == country_to:
@@ -42,30 +44,35 @@ if country_from == country_to:
 # Selecionar o algoritmo
 algorithm = st.selectbox("Escolha o algoritmo:", ["Busca em Largura", "Busca em Aprofundamento Interativo", "A*"])
 if algorithm == "Busca em Largura":
-    algorithm = bel.BuscaLargura().realizaBusca
+    algoritmo = bel
 elif algorithm == "Busca em Aprofundamento Interativo":
-    algorithm = bpi.BuscaProfundidadeLimitada()
+    algoritmo = bpi
 elif algorithm == "A*":
-    algorithm = ae.BuscaAEstrela()
+    algoritmo = bae
 else:
     st.error("Algoritmo não reconhecido.")
-
-# Executar o algoritmo
-caminho = algorithm(country_from, country_to)
 
 # Criação de um espaço vazio para o mapa
 map_placeholder = st.empty()
 
 # Botão para executar a busca
 if st.button("Buscar Rota"):
+
+    # Executar o algoritmo
+    roteiro = algoritmo.realizaBusca(country_from, country_to)
+
     if country_from != country_to:
         # Criação do mapa
         map_center = [50.8503, 4.3517]  # Coordenadas aproximadas do centro da Europa
         m = folium.Map(location=map_center, zoom_start=4)
 
         # Adicionando marcadores das cidades
-        folium.Marker(coordenadas[country_from], popup=country_from).add_to(m)
-        folium.Marker(coordenadas[country_to], popup=country_to).add_to(m)
+        for i in range(len(roteiro) - 1):
+            cidade_origem = roteiro[i]
+            cidade_destino = roteiro[i + 1]
+            folium.PolyLine([coordenadas[cidade_origem], coordenadas[cidade_destino]], color="blue", weight=2.5, opacity=1).add_to(m)
+        # folium.Marker(coordenadas[country_from], popup=country_from).add_to(m)
+        # folium.Marker(coordenadas[country_to], popup=country_to).add_to(m)
 
         # Exibir o mapa no Streamlit
         folium_static(m, width=700, height=500)

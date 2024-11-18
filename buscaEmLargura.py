@@ -84,7 +84,7 @@ class BuscaLargura(Busca):
     def realizaBusca(self, origem, destino):
         fronteira = Queue()
         resultado, qtdVisitados, qtdExpandidos, arvore = self.busca(origem, destino, fronteira)
-        self.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
+        # self.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
         return resultado
 
 # Exemplo de execução
