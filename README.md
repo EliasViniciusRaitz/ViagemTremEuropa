@@ -18,7 +18,7 @@
 
 ## Inicie o Sistema
 
-streamlit run main.py ou python -m streamlit run main.py
+- streamlit run main.py ou python -m streamlit run main.py
 
 ---
 
