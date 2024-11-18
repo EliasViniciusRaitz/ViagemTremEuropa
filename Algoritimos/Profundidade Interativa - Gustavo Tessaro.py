@@ -83,7 +83,10 @@ class BuscaAprofundamentoIterativo(BuscaProfundidadeLimitada):
         for i in range(1, 10):
             fronteira = LifoQueue()
             print("****limite ", i, " ***")
-        return self.busca(origem, destino, i, fronteira)
+            resultado, qtdVisitados, qtdExpandidos, arvore = self.busca(origem, destino, i, fronteira)
+            if resultado is not None:
+                self.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
+                return resultado
 
 
 if __name__ == '__main__':
@@ -91,7 +94,4 @@ if __name__ == '__main__':
     destinations = input("Digite a cidade de destino: ")
 
     algbusca = BuscaAprofundamentoIterativo()
-    resultado, qtdVisitados, qtdExpandidos, arvore = algbusca.realizaBusca(origins,destinations)
-
-    if resultado is not None:
-        algbusca.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
+    resultado = algbusca.realizaBusca(origins,destinations)
