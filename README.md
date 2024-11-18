@@ -1,4 +1,26 @@
-# ViagemTremEuropa
+# Viagem de Trem pela Europa 🌍🚂
+
+**Trabalho de Inteligência Artificial** - Simulação de viagem de trem entre capitais da Europa utilizando diferentes algoritmos de busca.
+
+---
+
+## Tecnologias Utilizadas
+
+- **Streamlit**: Para criação da interface web interativa.
+- **Folium**: Para renderização de mapas interativos.
+- **Streamlit-Folium**: Para integrar o Folium ao Streamlit.
+
+## Instale as Dependências
+
+pip install streamlit
+pip install folium
+pip install streamlit-folium
+
+## Inicie o Sistema
+
+streamlit run main.py ou python -m streamlit run main.py
+
+---
 
 Algoritmo de Busca Clássica. Consiste na implementação dos seguintes algoritmos: Largura, Aprofundamento Interativo e A* encontrando o caminho para uma viagem de trem entre dois países da Europa.
 
