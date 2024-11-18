@@ -4,7 +4,7 @@
 
 ---
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas (Front-End)
 
 - **Streamlit**: Para criação da interface web interativa.
 - **Folium**: Para renderização de mapas interativos.
@@ -12,9 +12,9 @@
 
 ## Instale as Dependências
 
-pip install streamlit
-pip install folium
-pip install streamlit-folium
+- pip install streamlit
+- pip install folium
+- pip install streamlit-folium
 
 ## Inicie o Sistema
 
