@@ -4,7 +4,9 @@ from streamlit_folium import folium_static
 import os
 import json
 
-from Algoritimos import BuscaLargura, BuscaProfundidade, AEstrela
+from Algoritimos import buscaProfundidadeInterativa as bpi
+from Algoritimos import buscaEmLargura as bel
+from Algoritimos import buscaAEstrela as ae
 
 # Adicionando Título na guia da Página 
 st.set_page_config(page_title="Trabalho - Inteligência Artificial", page_icon="🌍")
@@ -39,6 +41,17 @@ if country_from == country_to:
 
 # Selecionar o algoritmo
 algorithm = st.selectbox("Escolha o algoritmo:", ["Busca em Largura", "Busca em Aprofundamento Interativo", "A*"])
+if algorithm == "Busca em Largura":
+    algorithm = bel.BuscaLargura().realizaBusca
+elif algorithm == "Busca em Aprofundamento Interativo":
+    algorithm = bpi.BuscaProfundidadeLimitada()
+elif algorithm == "A*":
+    algorithm = ae.BuscaAEstrela()
+else:
+    st.error("Algoritmo não reconhecido.")
+
+# Executar o algoritmo
+caminho = algorithm(country_from, country_to)
 
 # Criação de um espaço vazio para o mapa
 map_placeholder = st.empty()
