@@ -14,7 +14,7 @@ class Pais:
 class BuscaProfundidadeLimitada:
 
     def __init__(self):
-        caminho_arquivo = os.path.join(os.path.dirname(__file__), '..', 'Grafos', 'origins_destinations.json')
+        caminho_arquivo = os.path.join(os.path.dirname(__file__), 'Grafos', 'origins_destinations.json')
         with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
             self.rotas = json.load(arquivo)
 
@@ -86,12 +86,12 @@ class BuscaAprofundamentoIterativo(BuscaProfundidadeLimitada):
             resultado, qtdVisitados, qtdExpandidos, arvore = self.busca(origem, destino, i, fronteira)
             if resultado is not None:
                 self.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
-                return resultado
+                return resultado, qtdVisitados, qtdExpandidos
 
-
+# Exemplo de execução
 if __name__ == '__main__':
     origins = input("Digite a cidade de origem: ")
     destinations = input("Digite a cidade de destino: ")
 
     algbusca = BuscaAprofundamentoIterativo()
-    resultado = algbusca.realizaBusca(origins,destinations)
+    rota = algbusca.realizaBusca(origins,destinations)

@@ -23,7 +23,7 @@ class Tree:
 
 class Busca:
     def __init__(self):
-        caminho_arquivo = os.path.join(os.path.dirname(__file__), '..', 'Grafos', 'origins_destinations.json')
+        caminho_arquivo = os.path.join(os.path.dirname(__file__), 'Grafos', 'origins_destinations.json')
         with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
             self.rotas = json.load(arquivo)
 
@@ -81,11 +81,14 @@ class Busca:
         arvore.show()
 
 class BuscaLargura(Busca):
+    def __init__(self):
+        super().__init__()
+
     def realizaBusca(self, origem, destino):
         fronteira = Queue()
         resultado, qtdVisitados, qtdExpandidos, arvore = self.busca(origem, destino, fronteira)
-        # self.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
-        return resultado
+        self.mostraResultado(resultado, qtdVisitados, qtdExpandidos, arvore)
+        return resultado, qtdVisitados, qtdExpandidos
 
 # Exemplo de execução
 if __name__ == "__main__":
@@ -93,4 +96,4 @@ if __name__ == "__main__":
     destinations = input("Digite a cidade de destino: ")
 
     algbusca = BuscaLargura()
-    algbusca.realizaBusca(origins, destinations)
+    rota = algbusca.realizaBusca(origins, destinations)

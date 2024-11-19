@@ -4,9 +4,9 @@ from streamlit_folium import folium_static
 import os
 import json
 
-from buscaProfundidadeInterativa import BuscaAprofundamentoIterativo as bpi
-from buscaEmLargura import BuscaLargura as bel
-from buscaAEstrela import BuscaHeuristica as bae
+from buscaProfundidadeInterativa import BuscaAprofundamentoIterativo
+from buscaEmLargura import BuscaLargura
+# from buscaAEstrela import BuscaHeuristica as bae
 
 # Adicionando Título na guia da Página 
 st.set_page_config(page_title="Trabalho - Inteligência Artificial", page_icon="🌍")
@@ -26,7 +26,7 @@ with open(caminho_arquivo_detalhes, 'r', encoding='utf-8') as arquivo:
 
 coordenadas = {}
 for cidade, detalhes in cidades_detalhes.items():
-    coordenadas[cidade] = [detalhes['latitude'], detalhes['longitude']]
+    coordenadas[cidade.strip()] = [detalhes['latitude'], detalhes['longitude']]
 
 
 # Selecionar o país de origem
@@ -42,15 +42,7 @@ if country_from == country_to:
     st.warning("Por favor, selecione capitais diferentes para origem e destino.")
 
 # Selecionar o algoritmo
-algorithm = st.selectbox("Escolha o algoritmo:", ["Busca em Largura", "Busca em Aprofundamento Interativo", "A*"])
-if algorithm == "Busca em Largura":
-    algoritmo = bel
-elif algorithm == "Busca em Aprofundamento Interativo":
-    algoritmo = bpi
-elif algorithm == "A*":
-    algoritmo = bae
-else:
-    st.error("Algoritmo não reconhecido.")
+algorithm = st.selectbox("Escolha o algoritmo:", ["Busca em Largura", "Busca em Aprofundamento Interativo", "Busca Heurística (A*)"])
 
 # Criação de um espaço vazio para o mapa
 map_placeholder = st.empty()
@@ -58,8 +50,28 @@ map_placeholder = st.empty()
 # Botão para executar a busca
 if st.button("Buscar Rota"):
 
-    # Executar o algoritmo
-    roteiro = algoritmo.realizaBusca(country_from, country_to)
+    if algorithm == "Busca em Largura":
+        algoritmoBusca = BuscaLargura()
+        roteiro, qtdVisitados, qtdExpandidos = algoritmoBusca.realizaBusca(country_from, country_to)
+        caminho = []
+        while roteiro is not None:
+            caminho.append(roteiro.cidade)
+            roteiro = roteiro.pai
+
+    elif algorithm == "Busca em Aprofundamento Interativo":
+        algoritmoBusca = BuscaAprofundamentoIterativo()
+        roteiro, qtdVisitados, qtdExpandidos = algoritmoBusca.realizaBusca(country_from, country_to)
+        caminho = []
+        while roteiro is not None:
+            caminho.append(roteiro.pais)
+            roteiro = roteiro.pai
+
+    # elif algorithm == "Busca Heurística (A*)":
+    #     algoritmoBusca = bae
+    else:
+        st.error("Algoritmo não reconhecido.")
+
+    
 
     if country_from != country_to:
         # Criação do mapa
@@ -67,12 +79,12 @@ if st.button("Buscar Rota"):
         m = folium.Map(location=map_center, zoom_start=4)
 
         # Adicionando marcadores das cidades
-        for i in range(len(roteiro) - 1):
-            cidade_origem = roteiro[i]
-            cidade_destino = roteiro[i + 1]
-            folium.PolyLine([coordenadas[cidade_origem], coordenadas[cidade_destino]], color="blue", weight=2.5, opacity=1).add_to(m)
-        # folium.Marker(coordenadas[country_from], popup=country_from).add_to(m)
-        # folium.Marker(coordenadas[country_to], popup=country_to).add_to(m)
+        for i in range(len(caminho) - 1):
+            cidade_origem = caminho[i]
+            cidade_destino = caminho[i + 1]
+            folium.PolyLine([coordenadas[cidade_origem], coordenadas[cidade_destino]], color="red", weight=2.5, opacity=1).add_to(m)
+            folium.Marker(coordenadas[cidade_origem], popup=cidade_origem).add_to(m)
+        folium.Marker(coordenadas[cidade_destino], popup=cidade_destino).add_to(m)
 
         # Exibir o mapa no Streamlit
         folium_static(m, width=700, height=500)
@@ -80,11 +92,11 @@ if st.button("Buscar Rota"):
         # Apresentar informações da busca
         st.write(f"Buscando rota de {country_from} para {country_to} usando o algoritmo {algorithm}...")
         # Simulação de resultados
-        st.write("Rota: ...")
-        st.write("Distância total: ...")
-        st.write("Nós gerados: ...")
-        st.write("Nós expandidos: ...")
-        st.write("Tempo de execução: ...")
+        st.write("Rota: ", caminho[::-1])
+        # st.write("Distância total: ...")
+        st.write("Nós visitados: ", qtdVisitados)
+        st.write("Nós expandidos: ", qtdExpandidos)
+        # st.write("Tempo de execução: ...")
 
 # Adicionando um rodapé
 st.markdown("""<footer style='text-align: center; margin-top: 50px;'>
