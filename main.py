@@ -6,7 +6,7 @@ import json
 
 from buscaProfundidadeInterativa import BuscaAprofundamentoIterativo
 from buscaEmLargura import BuscaLargura
-# from buscaAEstrela import BuscaHeuristica as bae
+from buscaAEstrela import BuscaHeuristica
 
 # Adicionando Título na guia da Página 
 st.set_page_config(page_title="Trabalho - Inteligência Artificial", page_icon="🌍")
@@ -66,8 +66,13 @@ if st.button("Buscar Rota"):
             caminho.append(roteiro.pais)
             roteiro = roteiro.pai
 
-    # elif algorithm == "Busca Heurística (A*)":
-    #     algoritmoBusca = bae
+    elif algorithm == "Busca Heurística (A*)":
+        algoritmoBusca = BuscaHeuristica()
+        roteiro, qtdVisitados, qtdExpandidos = algoritmoBusca.realizaBusca(country_from, country_to)
+        caminho = []
+        while roteiro is not None:
+            caminho.append(roteiro.pais)
+            roteiro = roteiro.pai
     else:
         st.error("Algoritmo não reconhecido.")
 
